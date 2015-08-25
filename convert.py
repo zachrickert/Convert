@@ -1,5 +1,5 @@
 #convert.py
-# This program will convert celsius to fahrenheit
+# This program will convert tempratures.
 
 def main():
     print ("This program will convert measurements")
