@@ -3,11 +3,29 @@
 
 def main():
     print ("This program will convert a Celsius temprature to Fahrenheit.")
-    print ("The program will loop 5 times.")
+    print ("It will create a table of every 10oC from 0 - 100")
 
-    for i in range(5):
-        celsius = input("What is the temprature (celsius)? ")
+    print ("   oC     |    oF    ")
+    print ("----------|----------")
+    for i in range(11):
+        celsius = i * 10.0
         fahrenheit = 9.0/5.0 * celsius +32.0
-        print("The temprature is " + str(fahrenheit) + "oF")
+
+        if celsius < 10.0:
+            spacer1 = "  "
+        elif celsius < 100.0:
+            spacer1 = " "
+        else:
+            spacer1 = ""
+
+        if fahrenheit < 10.0:
+            spacer2 = "  "
+        elif fahrenheit < 100.0:
+            spacer2 = " "
+        else:
+            spacer2 = ""
+
+
+        print("  " + spacer1 + str(celsius) + "   |  " + spacer2 + str(fahrenheit))
 
 main()

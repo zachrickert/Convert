@@ -1,5 +1,5 @@
 # convert
 
 This program will convert Celsius to Fahrenheit
-this will loop through the calculation 5 times.
+it will create a table at ever 10oC
 
