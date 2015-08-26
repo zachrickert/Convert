@@ -2,5 +2,9 @@
 
 This program will convert one measurement to another
 
-1 = Celsius to Fahrenheit
-2 = Fahrenheit to Celsius
+Celsius to Fahrenheit
+Fahrenheit to Celsius
+
+Kilometer to Miles
+Miles to Kilometers
+
