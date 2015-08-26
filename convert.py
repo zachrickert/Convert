@@ -22,22 +22,43 @@ def main():
             print("The temprature is " + str(celsius) + "oFC")
 
     if conversion_type == 2:
-        print ("1) Kilometers to Miles")
-        print ("2) Miles to Kilometers")
-        conversion_type = 20 + input("Enter conversion type: ")
-
-        if conversion_type == 21:
-            km = input("What is the length (kilometers)? ")
-            miles = 0.621371 * km
-            print("The length is " + str(miles) + " miles")
-        if conversion_type == 22:
-            miles = input("What is the length (miles)? ")
-            km = 1.60934 * miles
-            print("The length is " + str(km) + "km")
+        original_length = input("Please input length: ")
+        print ("What type of units?")
+        print ("m - meters, cm - centermeters, km - kilometers, mm - millimeter")
+        print ("mi - miles, yd - yards, ft - feet, in - inches")
+        print ("na - Nautical Mile, ly - light year")
+        original_unit = raw_input("Enter original units: ")
+        new_unit = raw_input("Enter units to convert to: ")
+        new_length = original_length * length_factor(original_unit) / length_factor(new_unit)
+        print (str(original_length) + original_unit + " = " + str(new_length) + new_unit)
 
 
+def length_factor(unit):
+    factor = 0
+    unit = unit.lower()
 
+    if unit == "m":
+        factor = 1.0
+    if unit == "cm":
+        factor = 0.01
+    if unit == "km":
+        factor = 1000
+    if unit == "mm":
+        factor = 0.001
+    if unit == "mi":
+        factor = 1609.34
+    if unit == "yd":
+        factor = 0.9144
+    if unit == "in":
+        factor = 0.0254
+    if unit == "ft":
+        factor = 0.3048
+    if unit == "na":
+        factor = 1852
+    if unit == "ly":
+        factor = 9.4605284 * 10**15
 
+    return factor
 
 
 main()
